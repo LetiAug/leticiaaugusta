@@ -1,39 +1,124 @@
-body {
-    background-image: url('https://image.freepik.com/fotos-gratis/bordas-de-papel-esfarrapadas-dispostas_23-2147734468.jpg');
+/* reset do css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+    body {
+    background-image: url('../img/fundo.jpg');
+     
     background-size: auto 100vh;
-    font-family:"Share Tech Mono", monospace;
+    font-family: 'Amatic SC', cursive;
     height: 100vh;
+    font-size: 12px;
   } 
+
+/*se a tela estiver pelo menos 400px vai caregar esses estilos (essa parte é do mobile)*/
+  @media (min-width: 400px) {
+    body{
+      font-size: 14px;
+    }
+  }
+
+  /* se a tela tiver pelo menos 600px vai carregar esses etilos*/
+  @media (min-width: 600px) {
+    body{
+      font-size: 18px;
+    }
+  }
+
+  header{
+    height: 100vh;
+    /*propriedade*/
+    justify-content: center;
+    /*comando, esse comando só funciona com a propriedade*/
+    display: flex;
+    align-items: center;
+  }
   
   .menu {
     background-color: #EFBCD5;
+    position: fixed;
+    width: 100vw;
+    top: 0;
   }
   
   .menu ul {
     display: flex;
     justify-content: space-evenly;
+    /*tambem tem space-around;, space-betwen;.*/
   }
   
   .menu li{
     list-style: none;
   }
+
+  .menu a {
+    display: block;
+    padding: 10px 15px;
+  }
   
   a {
     color: #392F5A;
     text-decoration: none; 
+    font-family: 'The Girl Next Door', cursive;
+    font-size: 1.5em;
   }
   
   a:hover {
     text-decoration: underline;
   }
   
-  .site-title,
-  .site-subtitle {
+  .site-title {
     color: #392F5A;
     text-align: center;
     font-style: italic;
+    font-size: 4em;
+    font-family: 'The Girl Next Door', cursive;
    }
   
-  .site-subtitle {
+  .site-subtitle,
+  .site-subtitle-2,
+  .site-subtitle-3 {
     font-style: italic;
+    font-size: 1.5em;
+    font-family: 'The Girl Next Door', cursive;
+    color: #392F5A;
+    text-align: center;
    }
+
+   .portfolio {
+     padding: 2em;
+  }
+
+   .portfolio h2 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 2em;
+    color: #392F5A
+    }
+
+    .portfolio .grid {
+      display: grid;
+      gap: 2.5em;
+      /*grid-template-columns, para fazer colunas.
+      se fizer isso, usar o @media para configuração de celular.*/
+    }
+
+    .portfolio figure {
+      text-align: center;
+    }
+
+    .img-portfolio{
+      height: 200px;
+      width: 350px;
+    }
+    
+   figcaption{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5em;
+    color: #392F5A
+    }
+
